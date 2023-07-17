@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightBulb</title>
+    <style>
+        .wrap {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: aqua; */
+        }
+        img{
+            width: 200px;
+            
+        }
+        .OnButton{
+            width: 100px;
+            height: 30px;
+        }
+        .OffButton{
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+
+
+    
+    
+    <!-- image  -->
+    <!-- this is the image we have added using img tag -->
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+
+    <!-- On button -->
+    <!-- this is the button we have added for turning bulb on -->
+    <!-- when ever someone clicks on the button a funtion is called named turnOnBulb which makes the bulb on.. -->
+     <button class="OnButton" onclick="turnOnBulb()">On </button>
+ 
+    <!-- off button -->
+    <!-- this is the one for off - -->
+     <button class="OffButton" onclick="turnOffBulb()">off</button>
+
+
+</div>
+
+
+<script>
+// Now Question is how we are going to turn on bulb ?
+// We can change the image to make it turn on
+// To change an image we use document.getElementById to get the element and change its  img source 
+function turnOnBulb(){
+    console.log( document.getElementById('bulb'),"tHIS IS TEH IMAGE WE HAVE GOT USING THIS COMMAND")
+    document.getElementById('bulb').src="https://www.w3schools.com/js/pic_bulbon.gif"
+}
+function turnOffBulb(){
+    document.getElementById('bulb').src="https://www.w3schools.com/js/pic_bulboff.gif"
+}
+
+
+</script>
+
+
+</body>
+</html>
